@@ -14,7 +14,7 @@
       <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
     </div>   
     <myform>
-      <h1 solt="test">this is father slot</h1>
+      <h1 slot="test">this is father slot</h1>
     </myform>
   </section>
 </template>
