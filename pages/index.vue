@@ -13,7 +13,9 @@
       <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">显示密码输入框</el-button>
       <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
     </div>   
-    <myform/>
+    <myform>
+      <h1 solt="test">this is father slot</h1>
+    </myform>
   </section>
 </template>
 
