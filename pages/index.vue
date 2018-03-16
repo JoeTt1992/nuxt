@@ -1,21 +1,26 @@
 <template>
   <section class="container"> 
-    <div class="content">
-      <el-button type="primary" class="mybtn" @click="selectCity()">选择城市</el-button>
-      <el-radio v-model="radio" label="1">北京</el-radio>
-      <el-radio v-model="radio" label="2">上海</el-radio>
+    <div class="slide">
+      
     </div>
     <div class="content">
-      <el-button type="danger" class="mybtn" @click="returnName()">重置姓名</el-button>
-      <el-input v-model="name" class="myinput" placeholder="请输入姓名"></el-input>
-    </div>
-    <div class="content">
-      <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">显示密码输入框</el-button>
-      <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
+      <div class="item">
+        <el-button type="primary" class="mybtn" @click="selectCity()">选择城市</el-button>
+        <el-radio v-model="radio" label="1">北京</el-radio>
+        <el-radio v-model="radio" label="2">上海</el-radio>
+      </div>
+      <div class="item">
+        <el-button type="danger" class="mybtn" @click="returnName()">重置姓名</el-button>
+        <el-input v-model="name" class="myinput" placeholder="请输入姓名"></el-input>
+      </div>
+      <div class="item">
+        <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">显示密码输入框</el-button>
+        <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
+      </div>   
+      <myform>
+        <div class="myslot" slot="test">father</div>
+      </myform>
     </div>   
-    <myform>
-      <h1 slot="test">this is father slot</h1>
-    </myform>
   </section>
 </template>
 
@@ -66,13 +71,22 @@ export default {
 }
 </script>
 
-<style>
-.container {
-  padding: 30px;
-}
+<style lang="scss">
+$width:1280px;
+$height:10px;
 .content{
-  width: 1280px;
+  width: $width;
+  padding: 20px;
+}
+.item{
   height: 50px;
+}
+.slide{
+  width: 200px;
+  height: $height;
+  float:left;
+  background-color: #409EFF;
+  color: white;
 }
 .mybtn{
   float: left;
