@@ -1,7 +1,8 @@
 <template>
   <section class="container"> 
     <div class="slide">
-      
+      <div class="slide-item">form页面</div>
+      <div class="slide-item">图片页面</div>
     </div>
     <div class="content">
       <div class="item">
@@ -18,7 +19,8 @@
         <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
       </div>   
       <myform>
-        <div class="myslot" slot="test">father</div>
+        <h1 class="myslot" slot="test">father</h1>
+        <h2 slot="test3">123</h2>
       </myform>
     </div>   
   </section>
@@ -73,20 +75,29 @@ export default {
 
 <style lang="scss">
 $width:1280px;
-$height:10px;
+$height:1000px;
+$slide-w:200px;
+$line-height:$height;
+
 .content{
   width: $width;
   padding: 20px;
+  margin-left:$slide-w;
 }
 .item{
   height: 50px;
 }
 .slide{
-  width: 200px;
+  width: $slide-w;
   height: $height;
   float:left;
   background-color: #409EFF;
   color: white;
+}
+.slide-item{
+  height:40px;
+  line-height:40px;
+  text-align:center;
 }
 .mybtn{
   float: left;

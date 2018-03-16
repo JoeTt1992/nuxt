@@ -2,5 +2,6 @@
 	<div>
 		<slot name="test">123</slot>
 		<slot name="test2">234</slot>
+		<slot name="test3"></slot>
 	</div>	
 </template>
