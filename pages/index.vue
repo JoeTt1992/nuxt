@@ -76,7 +76,7 @@ export default {
 <style lang="scss">
 $width:1280px;
 $height:1000px;
-$slide-w:200px;
+$slide-w:100px;
 $line-height:$height;
 
 .content{
