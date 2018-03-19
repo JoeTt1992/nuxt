@@ -15,7 +15,7 @@
         <el-input v-model="name" class="myinput" placeholder="请输入姓名"></el-input>
       </div>
       <div class="item">
-        <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">显示密码输入框</el-button>
+        <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">{{pwdtext}}</el-button>
         <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
       </div>   
       <myform>
@@ -44,7 +44,8 @@ export default {
       radio : '1',
       name:'',
       pwdinput: false,
-      password : ''
+      password : '',
+      pwdtext:'显示密码输入框'
     };
   },
   methods:{
@@ -62,11 +63,11 @@ export default {
     showPwd: function(){
       if(this.pwdinput == false){
         this.pwdinput = true;
-        $("#pwd").html("隐藏密码输入框");
+        this.pwdtext = '隐藏密码输入框';
       }
       else{
         this.pwdinput = false;
-        $("#pwd").html("显示密码输入框");
+        this.pwdtext = '显示密码输入框';
       }
     }
   }
@@ -76,9 +77,12 @@ export default {
 <style lang="scss">
 $width:1280px;
 $height:1000px;
-$slide-w:100px;
+$slide-w:150px;
 $line-height:$height;
 
+body{
+  font-size:14px;
+}
 .content{
   width: $width;
   padding: 20px;
