@@ -20,7 +20,7 @@
       </div>   
       <myform>
         <h1 class="myslot" slot="test">father</h1>
-        <h2 slot="test3">123</h2>
+
       </myform>
     </div>   
   </section>
