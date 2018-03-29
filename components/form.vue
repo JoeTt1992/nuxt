@@ -20,8 +20,7 @@ export default{
 	},
 	props:{
 		formCount:{
-			type: Number,
-			default: 30
+			type: Number
 		}
 	},
 	methods:{

@@ -18,7 +18,7 @@
         <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">{{pwdtext}}</el-button>
         <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
       </div>   
-      {{count}}
+      <p>{{count}}</p>
       <myform :form-count="nowcount"  @on-change="changecount">
         <!-- <h1 class="myslot" slot="test">father</h1> -->
       </myform>
@@ -53,7 +53,7 @@ export default {
   methods:{
     changecount: function(){
       this.count++;
-      this.nowcount = this.count;
+      this.nowcount--;
     },
     selectCity: function(){
       if(this.radio == '1'){
