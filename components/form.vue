@@ -1,10 +1,11 @@
 <template>
 	<div>
-		<slot name="test">son test</slot>
+		<!-- <slot name="test">son test</slot>
 		<slot name="test2">son test2</slot>
-		<slot name="test3">ppp</slot>
+		<slot name="test3">ppp</slot> -->
 
-		<div class="btnclick" @click="myevent()">{{clickme}}</div>
+		<div class="btnclick" @click="myevent">{{clickme}}</div>
+		<p>{{formCount}}</p>
 	</div>	
 </template>
 
@@ -17,11 +18,15 @@ export default{
 			clickme: "点我"
 		}
 	},
+	props:{
+		formCount:{
+			type: Number,
+			default: 30
+		}
+	},
 	methods:{
 		myevent:function(){
-			console.info("123");
-			setTimeout(()=>console.info("456"),3000);
-			console.info("789")
+			this.$emit('on-change')
 		}
 	}
 }
