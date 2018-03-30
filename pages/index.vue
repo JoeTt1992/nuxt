@@ -1,9 +1,5 @@
 <template>
   <section class="container"> 
-    <div class="slide">
-      <div class="slide-item">form页面</div>
-      <div class="slide-item">图片页面</div>
-    </div>
     <div class="content">
       <div class="item">
         <el-button type="primary" class="mybtn" @click="selectCity()">选择城市</el-button>
