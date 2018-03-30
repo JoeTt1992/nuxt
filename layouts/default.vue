@@ -2,7 +2,7 @@
   <div>
     <div class="slide">
       <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider'}">form页面</nuxt-link></div>
-      <div class="slide-item">图片页面</div>
+      <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider-about'}">关于页面</nuxt-link></div>
     </div>
     <nuxt/>
   </div>
@@ -13,7 +13,7 @@
   $height:1000px;
   $slide-w:150px;
   $line-height:$height;
-  
+
   *{
     padding: 0;
     margin: 0;
