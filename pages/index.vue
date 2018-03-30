@@ -90,21 +90,6 @@ body{
   padding: 20px;
   margin-left:$slide-w;
 }
-.item{
-  height: 50px;
-}
-.slide{
-  width: $slide-w;
-  height: $height;
-  float:left;
-  background-color: #409EFF;
-  color: white;
-}
-.slide-item{
-  height:40px;
-  line-height:40px;
-  text-align:center;
-}
 .mybtn{
   float: left;
   margin-right: 20px;
