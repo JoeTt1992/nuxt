@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="slide">
+      <div class="slide-item"><nuxt-link class="mylink" to="/">首页</nuxt-link></div>
       <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider'}">form页面</nuxt-link></div>
       <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider-about'}">关于页面</nuxt-link></div>
     </div>
@@ -36,5 +37,8 @@
     height:40px;
     line-height:40px;
     text-align:center;
+  }
+  .slide-item:hover{
+    background-color:#2C8EF4;
   }
 </style>
