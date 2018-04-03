@@ -1,9 +1,6 @@
 <template>
 	<div>
-		<!-- <slot name="test">son test</slot>
-		<slot name="test2">son test2</slot>
-		<slot name="test3">ppp</slot> -->
-
+		<slot name="fff">ppp</slot>
 		<div class="btnclick" @click="myevent">{{clickme}}</div>
 		<p>{{formCount}}</p>
 	</div>	

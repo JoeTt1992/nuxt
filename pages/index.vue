@@ -17,7 +17,7 @@
       <p>{{count}}</p>
       <myform :form-count="nowcount"  @on-change="changecount">
         <!-- <h1 class="myslot" slot="test">father</h1> -->
-      </myform>
+      </myform> 
     </div>   
   </section>
 </template>
