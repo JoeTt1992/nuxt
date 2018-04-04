@@ -3,6 +3,7 @@
 		<slot name="fff">ppp</slot>
 		<div class="btnclick" @click="myevent">{{clickme}}</div>
 		<p>{{formCount}}</p>
+		<h1>放假了!</h1>
 	</div>	
 </template>
 
