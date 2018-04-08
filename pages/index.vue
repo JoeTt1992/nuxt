@@ -15,6 +15,7 @@
         <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
       </div>   
       <p>{{count}}</p>
+      <p>这是computed:{{aftertest}}</p>
       <myform :form-count="nowcount"  @on-change="changecount">
         <!-- <h1 class="myslot" slot="test">father</h1> -->
       </myform> 
@@ -43,7 +44,8 @@ export default {
       pwdinput: false,
       password : '',
       pwdtext:'显示密码输入框',
-      nowcount:80
+      nowcount:80,
+      test:20
     };
   },
   methods:{
@@ -72,6 +74,11 @@ export default {
         this.pwdtext = '显示密码输入框';
       }
     }
+  },
+  computed:{
+     aftertest:function(){
+       return this.test + 20;
+     }
   }
 }
 </script>
