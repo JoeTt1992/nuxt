@@ -8,7 +8,9 @@
       </div>
       <div class="item">
         <el-button type="danger" class="mybtn" @click="returnName()">重置姓名</el-button>
+        <el-button type="danger" class="mybtn" @click="changeName()">改变姓名</el-button>
         <el-input v-model="name" class="myinput" placeholder="请输入姓名"></el-input>
+        <input type="test" ref="nameinput">
       </div>
       <div class="item">
         <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">{{pwdtext}}</el-button>
@@ -49,6 +51,10 @@ export default {
     };
   },
   methods:{
+    changeName:function(){
+      console.info(this.$refs.nameinput);
+      this.$refs.nameinput.value = "33";
+    },
     changecount: function(){
       this.count++;
       this.nowcount--;
