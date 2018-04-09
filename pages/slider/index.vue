@@ -1,21 +1,19 @@
 <template>
 	<div>
-		<myform>
-			<div slot="fff">555</div>
-		</myform>
+		<ul>	
+			<li class="aaa" v-for="item in items" :key="item.a">
+				{{ item }}
+			</li>
+		</ul>
 	</div>
 </template>
 
 <script>
-	import myform from '~/components/form.vue'
 
 	export default{
-		components: {
-		    myform
-		},
 		data(){
 			return{
-
+				items:[1,32,53,44,5]
 			}
 		}
 	}
