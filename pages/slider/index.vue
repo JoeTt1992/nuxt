@@ -1,20 +1,27 @@
 <template>
 	<div>
-		<ul>	
-			<li class="aaa" v-for="item in items" :key="item.a">
-				{{ item }}
-			</li>
-		</ul>
+		<div class="2" @click="myspread()">
+			click me
+		</div>
 	</div>
 </template>
 
 <script>
-
 	export default{
 		data(){
 			return{
-				items:[1,32,53,44,5]
+				items:[1,32,53,44,5],
+				numbers:[1,2]
 			}
+		},
+		methods:{
+			myspread:function(){
+				const numbers = [1,2];
+				myspread2(...numbers);
+			},
+			myspread2:function(x,y){
+				console.info(x+y)
+			}		
 		}
 	}
 </script>
