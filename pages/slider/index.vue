@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="2" @click="myspread()">
+		<div @click="myspread()">
 			click me
 		</div>
 	</div>
@@ -10,17 +10,16 @@
 	export default{
 		data(){
 			return{
-				items:[1,32,53,44,5],
-				numbers:[1,2]
+				items:[1,32,53,44,5]
 			}
 		},
 		methods:{
-			myspread:function(){
-				const numbers = [1,2];
-				myspread2(...numbers);
-			},
 			myspread2:function(x,y){
-				console.info(x+y)
+				console.info(x+y);
+			},
+			myspread:function(){
+				const num = [1,5]
+				this.myspread2(...num);
 			}		
 		}
 	}
