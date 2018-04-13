@@ -4,6 +4,7 @@
       <div class="slide-item"><nuxt-link class="mylink" to="/">首页</nuxt-link></div>
       <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider'}">form页面</nuxt-link></div>
       <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider-about'}">关于页面</nuxt-link></div>
+      <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider-useVuex'}">使用vuex</nuxt-link></div>
     </div>
     <nuxt/>
   </div>

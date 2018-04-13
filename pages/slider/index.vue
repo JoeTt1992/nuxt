@@ -18,11 +18,11 @@
 			}
 		},
 		methods:{			
-			myspread:function(){
+			myspread(){
 				const num = [1,5];
 				this.myspread2(...num);
 			},
-			myspread2:function(x,y){
+			myspread2(x,y){
 				this.result = x+y
 			}	
 		}
