@@ -3,19 +3,20 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
-const state={
-	count:50
+const createStore = () =>{
+	return new Vuex.Store({
+		state:{
+			count:50
+		},
+		mutations:{
+			add(state){
+		        state.count++;
+		    },
+		    reduce(state){
+		        state.count--;
+		    }
+		}
+	})
 }
 
-const mutations={
-    add(state){
-        state.count++;
-    },
-    reduce(state){
-        state.count--;
-    }
-}
-
-export default new Vuex.Store({
-	state,mutations
-})
+export default createStore
