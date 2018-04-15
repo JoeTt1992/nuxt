@@ -1,52 +1,45 @@
 <template>
   <div>
+    <div class="slide">
+      <div class="slide-item"><nuxt-link class="mylink" to="/">首页</nuxt-link></div>
+      <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider'}">form页面</nuxt-link></div>
+      <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider-about'}">关于页面</nuxt-link></div>
+      <div class="slide-item"><nuxt-link class="mylink" :to="{name:'slider-useVuex'}">使用vuex</nuxt-link></div>
+    </div>
     <nuxt/>
   </div>
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<style lang="scss">
+  $width:1280px;
+  $height:1000px;
+  $slide-w:150px;
+  $line-height:$height;
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .mylink{
+    text-decoration: none;
+    color: #fff;
+  }
+  .item{
+    height: 50px;
+  }
+  .slide{
+    width: $slide-w;
+    height: $height;
+    float:left;
+    background-color: #409EFF;
+    color: white;
+  }
+  .slide-item{
+    height:40px;
+    line-height:40px;
+    text-align:center;
+  }
+  .slide-item:hover{
+    background-color:#2C8EF4;
+  }
 </style>

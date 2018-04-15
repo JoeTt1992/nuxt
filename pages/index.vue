@@ -1,9 +1,5 @@
 <template>
   <section class="container"> 
-    <div class="slide">
-      <div class="slide-item">form页面</div>
-      <div class="slide-item">图片页面</div>
-    </div>
     <div class="content">
       <div class="item">
         <el-button type="primary" class="mybtn" @click="selectCity()">选择城市</el-button>
@@ -12,16 +8,19 @@
       </div>
       <div class="item">
         <el-button type="danger" class="mybtn" @click="returnName()">重置姓名</el-button>
+        <el-button type="danger" class="mybtn" @click="changeName()">改变姓名</el-button>
         <el-input v-model="name" class="myinput" placeholder="请输入姓名"></el-input>
+        <input type="test" ref="nameinput">
       </div>
       <div class="item">
         <el-button type="success" class="mybtn" id="pwd" @click="showPwd()">{{pwdtext}}</el-button>
         <el-input v-model="password" class="myinput" type="password" placeholder="请输入密码" v-if="pwdinput"></el-input> 
       </div>   
-      <myform>
-        <h1 class="myslot" slot="test">father</h1>
-
-      </myform>
+      <p>{{count}}</p>
+      <p>这是computed:{{aftertest}}</p>
+      <myform :form-count="nowcount"  @on-change="changecount">
+        <!-- <h1 class="myslot" slot="test">father</h1> -->
+      </myform> 
     </div>   
   </section>
 </template>
@@ -41,14 +40,25 @@ export default {
   },
   data(){
     return{
+      count : 20,
       radio : '1',
       name:'',
       pwdinput: false,
       password : '',
-      pwdtext:'显示密码输入框'
+      pwdtext:'显示密码输入框',
+      nowcount:80,
+      test:20
     };
   },
   methods:{
+    changeName:function(){
+      console.info(this.$refs.nameinput);
+      this.$refs.nameinput.value = "33";
+    },
+    changecount: function(){
+      this.count++;
+      this.nowcount--;
+    },
     selectCity: function(){
       if(this.radio == '1'){
         this.radio = '2';
@@ -70,6 +80,11 @@ export default {
         this.pwdtext = '显示密码输入框';
       }
     }
+  },
+  computed:{
+     aftertest:function(){
+       return this.test + 20;
+     }
   }
 }
 </script>
@@ -87,21 +102,6 @@ body{
   width: $width;
   padding: 20px;
   margin-left:$slide-w;
-}
-.item{
-  height: 50px;
-}
-.slide{
-  width: $slide-w;
-  height: $height;
-  float:left;
-  background-color: #409EFF;
-  color: white;
-}
-.slide-item{
-  height:40px;
-  line-height:40px;
-  text-align:center;
 }
 .mybtn{
   float: left;
