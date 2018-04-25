@@ -21,6 +21,9 @@
       <myform :form-count="nowcount"  @on-change="changecount">
         <!-- <h1 class="myslot" slot="test">father</h1> -->
       </myform> 
+
+      <!-- 使用materialize -->
+      <!-- <a class="waves-effect waves-light btn">按钮</a> -->
     </div>   
   </section>
 </template>
@@ -31,6 +34,8 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import $ from 'jquery'
+// 使用materialize
+// import '~/node_modules/material-ui-vue/docs/dist/materialize-css/css/materialize.min.css'
 
 Vue.use(ElementUI)
 
